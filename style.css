@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #011629;
+}
+
+h1 {
+    font-size: 95px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 80;
+    color: whitesmoke;
+}
+
+#time {
+    display: flex;
+    gap: 45px;
+    color: #fff;
+}
+
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    opacity: .8;
+    align-items: center;
+}
+
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #0e0d0d;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+}
+
+#time div {
+    position: absolute;
+    text-align: center;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+#time div span {
+    position: absolute;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    transform: translateX(-50%) translateY(-10px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#time .ap {
+    position: relative;
+    transform: translateX(-20px);
+}
+
+.dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+}
+
+.dots::before {
+    content: '';
+    top: -2px;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background: var(--clr);
+    border-radius: 35%;
+    box-shadow: 0 0 20px var(--clr),
+        0 0 60px var(--clr);
+}
